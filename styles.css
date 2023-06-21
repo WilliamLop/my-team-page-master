@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+
+:root{
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 98%);
+    --ff-Poppins: 'Poppins', sans-serif;
+    --ff-Serif: 'PT Serif', serif;
+    --gray: hsl(0, 0%, 66%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: var(--ff-Poppins);
+}
+
+
+.header__title{
+    font-family: var(--ff-Serif);
+    padding-top: 4rem;
+}
+
+
+.info__title{
+    text-transform: uppercase;
+    font-size: 1em;
+    margin: 2rem 0 1rem 0;
+}
+
+.info__paragraph{
+    font-size: .85em;
+}
+
+
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.grid{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.card__content{
+    display: flex;
+    gap: .3rem;
+}
+
+.card__profession{
+    writing-mode: vertical-rl;
+    font-family: var(--ff-Serif);
+    text-transform: uppercase;
+    font-size: .7em;
+    
+}
+
+.card__grid{
+    display: grid;
+    gap: .6rem;
+    position: relative;
+}
+
+.card__name{
+    font-weight: 600;
+    font-size: .9em;
+}
+
+
+.card__img{
+    width: 140px;
+    height: 240px;
+    aspect-ratio: 3 / 5;
+    object-fit: cover;
+}
+
+.name-mobile{
+    position: absolute;
+    bottom: 45px;
+}
+
+.card__mobile{
+    margin-top: 3.5rem;
+}
+
+.copy{
+    text-align: center;
+    color: var(--gray);
+}
+
+.copy a{
+    font-weight: 700;
+    color: var(--gray);
+    transition: color .5s;
+}
+
+.copy a:hover{
+    color: var(--black);
+}
+
+.footer{
+    padding: 3rem 0 1rem 0;
+}
+
+/* MediaQuerys */
+
+
+@media (min-width: 48rem){
+
+    body{
+        display: grid;
+        gap: 3rem;
+    }
+
+    .header__content{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 1rem 0 0;
+    }
+
+    .card__mobile{
+        margin-top: 0;
+    }
+
+    .card__desktop{
+        margin-top: 5.5rem;
+
+    }
+    .card__name{
+        position: absolute;
+        bottom: 30px;
+        
+    }
+
+    .header__title{
+        padding-top: 1.3rem;
+    }
+
+    .name-mobile{
+        position: absolute;
+        bottom: 50px;
+    }
+    
+    .name-desktop{
+        position: absolute;
+        bottom: -35px;
+    }
+    
+
+    .info__paragraph{
+        max-width: 400px;
+        font-size: 1.1em;
+    }
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card__img{
+        width: 250px;
+        height: 350px;
+    }
+
+}
