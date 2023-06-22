@@ -24,8 +24,12 @@ body{
 .header__title{
     font-family: var(--ff-Serif);
     padding-top: 4rem;
+    text-align: center;
 }
 
+.header__info{
+    text-align: center;
+}
 
 .info__title{
     text-transform: uppercase;
@@ -34,6 +38,7 @@ body{
 }
 
 .info__paragraph{
+    margin: 0 auto;
     font-size: .85em;
     max-width: 300px;
 }
@@ -41,15 +46,14 @@ body{
 
 .container{
     width: 90%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-top: 2rem;
 }
 
 .grid{
-    box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
     gap: 1rem;
     padding: 2rem 0;
 }
@@ -88,7 +92,7 @@ body{
 
 .name-mobile{
     position: absolute;
-    bottom: 45px;
+    bottom: 55px;
 }
 
 .card__mobile{
@@ -149,6 +153,10 @@ body{
         padding-top: 1.3rem;
     }
 
+    .header__info{
+        text-align: left;
+    }
+
     .name-mobile{
         position: absolute;
         bottom: 50px;
@@ -163,14 +171,26 @@ body{
     .info__paragraph{
         max-width: 400px;
         font-size: 1.1em;
+        margin: 0;
     }
     .grid{
         grid-template-columns: repeat(3, 1fr);
     }
 
+    
+    .card__img{
+        width: 180px;
+        height: 300px;
+        aspect-ratio: 3 / 5;
+        object-fit: cover;
+    }
+
+}
+
+
+@media (min-width: 70rem){
     .card__img{
         width: 250px;
         height: 350px;
     }
-
 }
